@@ -15,3 +15,11 @@ class Order:
         self.price = price
         self.time_of_order = time_of_order
         self.order_type = order_type
+
+
+    def __lt__(self, otherOrder): 
+        return (self.price, self.time_of_order) < (otherOrder.price, otherOrder.time_of_order)
+
+    def __gt__(self, otherOrder):
+        return (self.price, self.time_of_order) > (otherOrder.price, otherOrder.time_of_order)
+        
