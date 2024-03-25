@@ -6,8 +6,9 @@ def process_order(order) -> Order:
         customer_id = order['customer_id'],
         order_volume = order['order_volume'],
         ticker = order['ticker'],
-        price = order['price'],
-        time_of_order = order['id'], # possible substitute
-        order_type = order['order_type']
+        price = order['price'] if order["order_classification"] == "sell" else -order["price"],
+        time_of_order = order['id'], # respresenting time
+        order_type = order['order_type'],
+        order_classification = order["order_classification"]
     )
     return orderObj

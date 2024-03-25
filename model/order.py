@@ -6,7 +6,8 @@ class Order:
                  ticker: str, 
                  price: int, 
                  time_of_order: int, 
-                 order_type: str):
+                 order_type: str,
+                 order_classification: str):
         
         self.order_id = order_id
         self.customer_id = customer_id
@@ -14,9 +15,9 @@ class Order:
         self.ticker = ticker
         self.price = price
         self.time_of_order = time_of_order
+        self.classification = order_classification
         self.order_type = order_type
-
-
+        
     def __lt__(self, otherOrder): 
         return (self.price, self.time_of_order) < (otherOrder.price, otherOrder.time_of_order)
 

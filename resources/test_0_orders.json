@@ -7,7 +7,8 @@
             "ticker" : "META",
             "price" : "100",
             "id": 1,
-            "order_type": "limit"
+            "order_type": "limit",
+            "order_classification": "buy"
         }
     ]
  
